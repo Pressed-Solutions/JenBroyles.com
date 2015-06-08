@@ -256,7 +256,7 @@ class WoocommerceCartCount extends WP_Widget {
     }
 
     function widget( $args, $instance ) {
-        echo '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="' . _e( 'View your shopping cart' ) . '">' . sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
+        echo '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="' . _e( 'View your shopping cart' ) . '"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
     }
 }
 add_action( 'widgets_init', function(){
