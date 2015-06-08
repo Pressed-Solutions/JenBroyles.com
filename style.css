@@ -892,6 +892,10 @@ Before Header
 .before-header {
 	line-height: 1;
 	text-align: center;
+	background-color: #64c7c9;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
 }
 
 .before-header .wrap {
@@ -905,6 +909,18 @@ Before Header
 
 .before-header p:last-child {
 	margin-bottom: 0;
+}
+
+.before-header li {
+	display: inline;
+}
+
+.before-header li + li {
+	margin-left: 3em;
+}
+
+.before-header li a {
+	color: white;
 }
 
 
@@ -1555,6 +1571,10 @@ Media Queries
 }
 
 @media only screen and (max-width: 768px) {
+
+	.before-header li {
+		display: block;
+	}
 
 	.footer-widgets,
 	.site-footer {
