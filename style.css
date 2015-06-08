@@ -893,7 +893,6 @@ Before Header
 	line-height: 1;
 	background-color: #64c7c9;
 	text-transform: uppercase;
-	font-weight: 700;
 	font-size: 14px;
 }
 
@@ -917,6 +916,14 @@ Before Header
 	margin-bottom: 0;
 }
 
+.before-header .widget_nav_menu {
+    font-weight: 800;
+}
+
+.before-header li a {
+	color: white;
+}
+
 @media screen and (min-width: 769px) {
     .before-header li {
         display: inline;
@@ -937,10 +944,14 @@ Before Header
     .before-header .widget_lsi_widget {
     	float: right;
     }
-}
 
-.before-header li a {
-	color: white;
+    .before-header .lsi-social-icons li a {
+        padding: 0;
+    }
+
+    .before-header .lsi-social-icons li {
+        margin-bottom: 0 !important;
+    }
 }
 
 
