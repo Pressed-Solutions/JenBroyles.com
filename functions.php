@@ -287,16 +287,19 @@ add_action( 'genesis_after_header', 'custom_header_banner' );
 function custom_header_banner() {
     global $post;
 
-    $output .= '<div class="site-header-banner">';
-    if ( get_field( 'banner_image', $post->ID ) ) {
-        // if there is an image set, use it
-        $output .= get_field( 'banner_image', $post->ID );
-    } else {
-        // otherwise, default to the home page’s image
-        $output .= get_field( 'banner_image', 8 );
-    }
-    $output .= '<div class="signup-form">Sign up&hellip;</div>';
-    $output .= '</div>';
+    // do not show on posts or archives
+    if ( ! is_single() AND ( ! is_post_type_archive() ) ) {
+        $output .= '<div class="site-header-banner">';
+        if ( get_field( 'banner_image', $post->ID ) ) {
+            // if there is an image set, use it
+            $output .= get_field( 'banner_image', $post->ID );
+        } else {
+            // otherwise, default to the home page’s image
+            $output .= get_field( 'banner_image', 8 );
+        }
+        $output .= '<div class="signup-form">Sign up&hellip;</div>';
+        $output .= '</div>';
 
-    return $output;
+        return $output;
+    }
 }
