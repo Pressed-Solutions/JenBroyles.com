@@ -985,12 +985,37 @@ Site Header
 		height: 523px;
 		width: 66%;
 	}
+	.signup-form .widget {
+		margin: 50px auto;
+	}
+	.signup-form .widget-title,
+	.signup-form h2 {
+		font-size: 24px;
+	}
+	.signup-form p.small {
+		font-size: 14px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.beautiful .site-header-banner-image {
-		height: 300px;
-		width: 50%;
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.signup-form .widget {
+		margin: 25px auto;
+	}
+	.signup-form .widget h2,
+	.signup-form .widget h4 {
+		font-size: 18px;
+	}
+	.signup-form .widget input {
+		font-size: small;
+	}
+	.signup-form p.small {
+		font-size: 12px;
 	}
 }
 
@@ -1004,12 +1029,53 @@ Site Header
 		height: 300px;
 		width: 100%;
 	}
+	.signup-form {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 500px) {
 	.beautiful .site-header-banner-image {
 		height: 200px;
 	}
+}
+
+.signup-form .widget {
+	width: 60%;
+}
+
+.signup-form .widget-title {
+	text-transform: inherit;
+	color: white;
+	font-weight: 300;
+}
+
+.signup-form h2 {
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	color: #fff200;
+}
+
+.signup-form input {
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.signup-form input[type='submit'] {
+	background-color: #fff200;
+	width: 100%;
+	color: #000;
+	font-weight: bold;
+}
+
+.signup-form input[type='submit']:hover,
+.signup-form input[type='submit']:active {
+	background-color: #fff200;
+}
+
+.signup-form p.small {
+	text-align: center;
+	color: white;
 }
 
 /* Title Area
