@@ -1503,7 +1503,7 @@ h3.secondary-header {
     }
 }
 
-.home-testimonial-wrapper .testimonial {
+.home-testimonial-wrapper article.testimonial {
     padding: 25px;
     background-color: #F0F4F6;
     position: relative;
