@@ -290,16 +290,18 @@ function custom_header_banner() {
     // do not show on posts or archives
     if ( ! is_single() AND ( ! is_post_type_archive() ) ) {
         $output .= '<div class="site-header-banner">';
+        $output .= '<div class="site-header-banner-image" style="';
         if ( get_field( 'banner_image', $post->ID ) ) {
             // if there is an image set, use it
-            $output .= get_field( 'banner_image', $post->ID );
+            $output .= 'background-image: url(\'' . get_field( 'banner_image', $post->ID ) . '\');';
         } else {
             // otherwise, default to the home page’s image
-            $output .= get_field( 'banner_image', 8 );
+            $output .= 'background-image: url(\'' . get_field( 'banner_image', 8 ) . '\');';
         }
+        $output .= '"></div>';
         $output .= '<div class="signup-form">Sign up&hellip;</div>';
         $output .= '</div>';
 
-        return $output;
+        echo $output;
     }
 }
