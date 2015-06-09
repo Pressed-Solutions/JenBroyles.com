@@ -277,3 +277,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     echo '</div>
     </section>';
 }
+
+// Move primary nav into header
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'genesis_do_nav', 12 );
