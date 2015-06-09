@@ -1809,6 +1809,19 @@ Footer Widgets
 	padding: 60px 0 20px;
 }
 
+.footer-widgets-1 {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-widgets-1 input,
+	.footer-widgets-1 input[type='submit'] {
+		width: 48%;
+		margin-right: 5px;
+	}
+}
+
 .footer-widgets-2,
 .footer-widgets-3 {
 	width: 340px;
