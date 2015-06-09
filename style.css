@@ -1064,13 +1064,14 @@ Site Header
 .signup-form input[type='submit'] {
 	background-color: #fff200;
 	width: 100%;
-	color: #000;
+	color: #343c47;
 	font-weight: bold;
 }
 
 .signup-form input[type='submit']:hover,
 .signup-form input[type='submit']:active {
-	background-color: #fff200;
+	background-color: #64c7c9;
+	color: white;
 }
 
 .signup-form p.small {
