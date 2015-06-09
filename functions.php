@@ -361,3 +361,9 @@ add_action( 'init', 'testimonial_post_type', 0 );
 
 // Add custom thumbnail size for homepage archives
 add_image_size( 'home_featured', 708, 428, true );
+
+// Add menu to footer
+function add_footer_menu() {
+    wp_nav_menu( array( 'name' => 'main-menu' ) );
+}
+add_action( 'genesis_footer', 'add_footer_menu' );
