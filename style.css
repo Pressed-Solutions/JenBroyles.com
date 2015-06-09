@@ -1428,8 +1428,10 @@ h3.secondary-header {
     width: 100%;
 }
 
-.home-blog-wrapper article.post {
-    margin-bottom: 0;
+@media screen and (min-width: 768px) {
+    .home-blog-wrapper article.post {
+        margin-bottom: 0;
+    }
 }
 
 .home-blog-wrapper .wrapper {
@@ -1462,7 +1464,7 @@ h3.secondary-header {
 @media screen and (min-width: 500px) {
 	.home-content-wrapper .wp-post-image {
     	float: left;
-   		width: 50%;
+        width: 50%;
     	max-width:  340px;
     	margin-right: 40px;
 	}
