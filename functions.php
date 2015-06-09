@@ -256,7 +256,11 @@ class WoocommerceCartCount extends WP_Widget {
     }
 
     function widget( $args, $instance ) {
+        echo '<section class="widget woocommerce-cart-count">
+        <div class="widget_wrap">';
         echo '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="View your shopping cart"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
+        echo '</div>
+        </section>';
     }
 }
 add_action( 'widgets_init', function(){
@@ -267,5 +271,9 @@ add_action( 'widgets_init', function(){
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
+    echo '<section class="widget woocommerce-cart-count">
+    <div class="widget_wrap">';
 	return '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="View your shopping cart"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
+    echo '</div>
+    </section>';
 }
