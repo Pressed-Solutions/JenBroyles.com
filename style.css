@@ -55,6 +55,7 @@
 		- Responsive Menu
 	- Content Area
 		- Welcome Message
+		- Custom Homepage
 		- Entries
 		- After Entry
 		- Pagination
@@ -1388,6 +1389,65 @@ h3.secondary-header {
 	color: #fa806c;
 }
 
+.home-blog-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.home-blog-wrapper .post {
+    background-color: #64c7c9;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .home-blog-wrapper .post {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home-blog-wrapper {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .home-blog-wrapper .post {
+        width: 100%;
+    }
+}
+
+.home-blog-wrapper .wp-post-image {
+    width: 100%;
+}
+
+.home-blog-wrapper .post,
+.home-blog-wrapper .post:last-of-type {
+    margin-bottom: 40px;
+}
+
+.home-blog-wrapper .post + .post {
+    margin-left: 33px;
+}
+
+.home-blog-wrapper .wrapper {
+    padding: 25px;
+}
+
+.home-blog-wrapper h2 {
+    font-size: 24px;
+}
+
+.home-blog-wrapper,
+.home-blog-wrapper h2 a {
+    color: white;
+}
+
+.home-blog-wrapper .read-more {
+    color: #fff200;
+}
 
 /* Entries
 --------------------------------------------- */
