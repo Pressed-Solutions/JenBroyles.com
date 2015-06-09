@@ -1800,22 +1800,16 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #f5f5f5;
+	background: #fa806c url('images/footer-background.jpg') no-repeat center center / cover;
 	clear: both;
 	padding: 60px 0 20px;
 }
 
-.footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
 	width: 340px;
 }
 
-.footer-widgets-1 {
-	margin-right: 60px;
-}
-
-.footer-widgets-1,
 .footer-widgets-2 {
 	float: left;
 }
@@ -1841,6 +1835,9 @@ Footer Widgets
 	padding-bottom: 0;
 }
 
+.footer-widgets .secondary-header {
+	color: #fff200;
+}
 
 /*
 Site Footer
