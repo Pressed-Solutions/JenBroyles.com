@@ -300,21 +300,14 @@ function custom_header_banner() {
         }
         echo '"></div>';
         echo '<div class="signup-form">';
-        dynamic_sidebar( 'banner_widget_area' );
+            genesis_widget_area( 'banner_widget_area' );
         echo '</div>';
         echo '</div>';
     }
 }
 
 // Add banner widget area
-function banner_widget_area() {
-    register_sidebar( array(
-        'name'          => 'Banner Widget Area',
-        'id'            => 'banner_widget_area',
-        'before_widget' => '<div>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-    ));
-}
-add_action( 'widgets_init', 'banner_widget_area' );
+genesis_register_sidebar( array(
+    'name'          => 'Banner Widget Area',
+    'id'            => 'banner_widget_area',
+));
