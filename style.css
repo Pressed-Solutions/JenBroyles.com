@@ -1454,6 +1454,34 @@ h3.secondary-header {
     color: white;
 }
 
+.home-content-wrapper {
+    background-color: #FAF8DB;
+    margin-bottom: 40px;
+}
+
+.home-content-wrapper .wp-post-image {
+    float: left;
+    width: 30%;
+    max-width:  340px;
+    margin-right: 40px;
+}
+
+.home-content-wrapper .primary-header {
+    margin-top: 25px;
+}
+
+.home-content-wrapper *:not(img) {
+    padding-right: 25px;
+}
+
+.home-content-wrapper .button {
+    background-color: #64c7c9;
+}
+
+.home-content-wrapper .button:hover {
+    background-color: #fa806c;
+}
+
 /* Entries
 --------------------------------------------- */
 
