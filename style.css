@@ -1045,10 +1045,25 @@ Site Header
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+	.header-widget-area {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.header-widget-area {
+		padding-top: 20px;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 }
 
 .header-widget-area .widget {
