@@ -231,6 +231,10 @@ cite {
 	font-style: normal;
 }
 
+.dashicons {
+	margin-right: .666em;
+}
+
 /* Headings
 --------------------------------------------- */
 
@@ -1032,6 +1036,42 @@ Site Header
 	float: right;
 	text-align: right;
 	width: 800px;
+}
+
+.header-widget-area {
+	text-transform: uppercase;
+	font-size: 14px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.header-widget-area .widget {
+	padding: 1em;
+}
+
+.header-widget-area .widget + .widget {
+	border-left: 1px solid #c8c8c8;
+}
+
+.header-widget-area a {
+	color: #6b6b6b;
+}
+
+.header-widget-area .dashicons,
+.header-widget-area .count {
+	color: #fa7f6b;
+}
+
+.woocommerce-cart-count .count {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 0.1;
 }
 
 
