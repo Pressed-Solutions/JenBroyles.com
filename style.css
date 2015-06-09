@@ -1406,6 +1406,10 @@ h3.secondary-header {
     .home-blog-wrapper .post {
         width: 33%;
     }
+
+	.home-blog-wrapper article.post + article.post {
+    	margin-left: 33px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -1426,10 +1430,6 @@ h3.secondary-header {
 
 .home-blog-wrapper article.post {
     margin-bottom: 0;
-}
-
-.home-blog-wrapper article.post + article.post {
-    margin-left: 33px;
 }
 
 .home-blog-wrapper .wrapper {
@@ -1459,19 +1459,23 @@ h3.secondary-header {
     margin-bottom: 40px;
 }
 
-.home-content-wrapper .wp-post-image {
-    float: left;
-    width: 30%;
-    max-width:  340px;
-    margin-right: 40px;
+@media screen and (min-width: 500px) {
+	.home-content-wrapper .wp-post-image {
+    	float: left;
+   		width: 50%;
+    	max-width:  340px;
+    	margin-right: 40px;
+	}
 }
 
-.home-content-wrapper .primary-header {
-    margin-top: 25px;
+@media screen and (max-width: 499px) {
+	.home-content-wrapper .wp-post-image {
+		width: 100%;
+	}
 }
 
-.home-content-wrapper *:not(img) {
-    padding-right: 25px;
+.home-content-wrapper .wrapper {
+    padding: 25px;
 }
 
 .home-content-wrapper .button {
