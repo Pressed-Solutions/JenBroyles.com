@@ -977,7 +977,7 @@ Site Header
 .title-area {
 	float: left;
 	padding-top: 10px;
-	width: 320px;
+	width: 208px;
 }
 
 .site-title {
@@ -1008,12 +1008,12 @@ Site Header
 /* Logo, hide text */
 
 .header-image .site-header .wrap {
-	padding: 20px 0;
+	padding: 20px 0 0;
 }
 
 .header-image .site-title a {
 	float: left;
-	min-height: 120px;
+	min-height: 80px;
 	width: 100%;
 }
 
@@ -1032,7 +1032,8 @@ Site Header
 /* Widget Area
 --------------------------------------------- */
 
-.site-header .widget-area {
+.site-header .widget-area,
+.nav-primary {
 	float: right;
 	text-align: right;
 	width: 800px;
@@ -1109,19 +1110,25 @@ Site Navigation
 	text-align: left;
 }
 
+.genesis-nav-menu li {
+	padding: 0 20px;
+}
+
 .genesis-nav-menu a {
 	color: #666;
 	display: block;
 	font-size: 16px;
-	letter-spacing: 4px;
-	padding: 20px;
+	font-weight: 800;
+	padding: 20px 0;
 	position: relative;
+	border-bottom: 2px solid white;
 }
 
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #e5554e;
+	color: #fa806c;
+	border-bottom: 2px solid #fa806c;
 }
 
 .genesis-nav-menu .sub-menu .current-menu-item > a {
@@ -1209,10 +1216,6 @@ Site Navigation
 
 /* Primary Navigation
 --------------------------------------------- */
-
-.nav-primary {
-	background-color: #f5f5f5;
-}
 
 /* Responsive Menu
 --------------------------------------------- */
