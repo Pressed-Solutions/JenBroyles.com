@@ -24,11 +24,13 @@ function home_loop() {
 
         echo '<article id="' . get_the_ID() . '" class="' . implode( ' ', get_post_class() ) . '" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">' . "\n";
             echo '<a href="' . get_permalink() . '" title="' . esc_attr( $blog_query->post->post_title ) . '">' . get_the_post_thumbnail( $blog_query->post->ID, 'home_featured' ) . '</a>' . "\n";
-            echo '<h2 class="entry-title" itemprop="headline">' . "\n";
-                echo '<a href="' . get_permalink() . '" title="' . esc_attr( $blog_query->post->post_title ) . '">' . get_the_title() . '</a>' . "\n";
-            echo '</h2>' . "\n";
-            echo '<p>' . get_the_excerpt() . '</p>' . "\n";
-            echo '<p><a class="read-more" href="' . get_permalink() . '">continue reading &gt;</a></p>';
+            echo '<div class="wrapper">' . "\n";
+                echo '<h2 class="entry-title" itemprop="headline">' . "\n";
+                    echo '<a href="' . get_permalink() . '" title="' . esc_attr( $blog_query->post->post_title ) . '">' . get_the_title() . '</a>' . "\n";
+                echo '</h2>' . "\n";
+                echo '<p>' . get_the_excerpt() . '</p>' . "\n";
+                echo '<p><a class="read-more" href="' . get_permalink() . '">continue reading &gt;</a></p>';
+            echo '</div>' . "\n";
         echo '</article>' . "\n";
     }
     wp_reset_postdata();
