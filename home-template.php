@@ -37,6 +37,7 @@ function home_loop() {
     echo '</section>' . "\n";
 
     echo '<section class="home-content-wrapper">';
+    get_the_post_thumbnail( $post->ID, 'medium' );
     the_content();
     echo '</section>';
 
