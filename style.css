@@ -907,7 +907,6 @@ Before Header
 }
 
 .before-header .wrap {
-	border-bottom: 1px dotted #ddd;
 	padding: 5px 0;
 }
 
@@ -1015,6 +1014,7 @@ Site Header
 	float: left;
 	min-height: 80px;
 	width: 100%;
+    background-size: contain !important;
 }
 
 /* Full width header, no widgets */
