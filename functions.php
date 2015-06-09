@@ -358,3 +358,6 @@ function testimonial_post_type() {
 
 // Hook into the 'init' action
 add_action( 'init', 'testimonial_post_type', 0 );
+
+// Add custom thumbnail size for homepage archives
+add_image_size( 'home_featured', 708, 428, true );
