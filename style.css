@@ -156,17 +156,17 @@ textarea:focus,
 }
 
 ::-moz-selection {
-	background-color: #e5554e;
+	background-color: #fa806c;
 	color: #fff;
 }
 
 ::selection {
-	background-color: #e5554e;
+	background-color: #fa806c;
 	color: #fff;
 }
 
 a {
-	color: #e5554e;
+	color: #fa806c;
 	text-decoration: none;
 }
 
@@ -189,7 +189,7 @@ a:hover {
 }
 
 .content a.more-link:hover {
-	background-color: #e5554e;
+	background-color: #fa806c;
 	color: #fff;
 }
 
@@ -399,7 +399,7 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-	background-color: #e5554e;
+	background-color: #fa806c;
 	border: none;
 	border-radius: 3px;
 	box-shadow: none;
@@ -1389,7 +1389,7 @@ Content Area
 
 .pagination li a:hover,
 .pagination li.active a {
-	background-color: #e5554e;
+	background-color: #fa806c;
 	color: #fff;
 }
 
@@ -1578,7 +1578,7 @@ Site Footer
 }
 
 .site-footer a:hover {
-	color: #e5554e;
+	color: #fa806c;
 }
 
 .site-footer p {
