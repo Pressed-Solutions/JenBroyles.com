@@ -1371,6 +1371,24 @@ Content Area
 	text-transform: none;
 }
 
+/* Custom Homepage
+--------------------------------------------- */
+
+h2.primary-header {
+	text-align: center;
+	text-transform: none;
+	margin-bottom: 0;
+	color: #343c47;
+}
+
+h3.secondary-header {
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 24px;
+	color: #fa806c;
+}
+
+
 /* Entries
 --------------------------------------------- */
 
