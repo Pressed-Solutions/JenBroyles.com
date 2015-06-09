@@ -232,7 +232,7 @@ cite {
 }
 
 .dashicons {
-	margin-right: .666em;
+	padding-right: 1.666em;
 }
 
 /* Headings
@@ -1052,7 +1052,7 @@ Site Header
 }
 
 .header-widget-area .widget {
-	padding: 1em;
+	padding: 0 1em;
 }
 
 .header-widget-area .widget + .widget {
