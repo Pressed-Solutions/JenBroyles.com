@@ -281,3 +281,22 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 // Move primary nav into header
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+// Add custom header images (requires ACF field)
+add_action( 'genesis_after_header', 'custom_header_banner' );
+function custom_header_banner() {
+    global $post;
+
+    $output .= '<div class="site-header-banner">';
+    if ( get_field( 'banner_image', $post->ID ) ) {
+        // if there is an image set, use it
+        $output .= get_field( 'banner_image', $post->ID );
+    } else {
+        // otherwise, default to the home page’s image
+        $output .= get_field( 'banner_image', 8 );
+    }
+    $output .= '<div class="signup-form">Sign up&hellip;</div>';
+    $output .= '</div>';
+
+    return $output;
+}
