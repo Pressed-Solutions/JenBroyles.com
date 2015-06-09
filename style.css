@@ -1051,9 +1051,7 @@ Site Header
 	font-weight: 300;
 }
 
-.signup-form h2 {
-	font-family: 'Pacifico', cursive;
-	text-align: center;
+.signup-form .secondary-header {
 	color: #fff200;
 }
 
