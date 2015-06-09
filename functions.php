@@ -289,19 +289,32 @@ function custom_header_banner() {
 
     // do not show on posts or archives
     if ( ! is_single() AND ( ! is_post_type_archive() ) ) {
-        $output .= '<div class="site-header-banner">';
-        $output .= '<div class="site-header-banner-image" style="';
+        echo '<div class="site-header-banner">';
+        echo '<div class="site-header-banner-image" style="';
         if ( get_field( 'banner_image', $post->ID ) ) {
             // if there is an image set, use it
-            $output .= 'background-image: url(\'' . get_field( 'banner_image', $post->ID ) . '\');';
+            echo 'background-image: url(\'' . get_field( 'banner_image', $post->ID ) . '\');';
         } else {
             // otherwise, default to the home page’s image
-            $output .= 'background-image: url(\'' . get_field( 'banner_image', 8 ) . '\');';
+            echo 'background-image: url(\'' . get_field( 'banner_image', 8 ) . '\');';
         }
-        $output .= '"></div>';
-        $output .= '<div class="signup-form">Sign up&hellip;</div>';
-        $output .= '</div>';
-
-        echo $output;
+        echo '"></div>';
+        echo '<div class="signup-form">';
+        dynamic_sidebar( 'banner_widget_area' );
+        echo '</div>';
+        echo '</div>';
     }
 }
+
+// Add banner widget area
+function banner_widget_area() {
+    register_sidebar( array(
+        'name'          => 'Banner Widget Area',
+        'id'            => 'banner_widget_area',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action( 'widgets_init', 'banner_widget_area' );
