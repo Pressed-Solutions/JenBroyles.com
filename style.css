@@ -967,7 +967,26 @@ Site Header
 }
 
 .beautiful .site-header-banner {
-	height: 200px;
+	background-color: #fa806c !important;
+	background-size: cover !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.beautiful .site-header-banner {
+		height: 523px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.beautiful .site-header-banner {
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.beautiful .site-header-banner {
+		height: 200px;
+	}
 }
 
 /* Title Area
