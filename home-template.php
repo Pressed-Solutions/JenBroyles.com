@@ -36,10 +36,12 @@ function home_loop() {
     wp_reset_postdata();
     echo '</section>' . "\n";
 
-    echo '<section class="home-content-wrapper">';
-    get_the_post_thumbnail( $post->ID, 'medium' );
+    echo '<section class="home-content-wrapper clearfix">' . "\n";
+    the_post_thumbnail( $post->ID, 'medium' );
+    echo '<div class="wrapper">' . "\n";
     the_content();
-    echo '</section>';
+    echo '</div>' . "\n";
+    echo '</section>' . "\n";
 
     echo '<h2 class="primary-header">Testimonials</h2>';
     echo '<h3 class="secondary-header">Praises for Jen</h3>';
