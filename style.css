@@ -1864,18 +1864,28 @@ Site Footer
 	font-size: 16px;
 	padding: 40px 0;
 	text-align: center;
+	background-color: #68c7c8;
+	color: white;
 }
 
 .site-footer a {
-	color: #666;
+	color: white;
 }
 
 .site-footer a:hover {
-	color: #fa806c;
+	color: #fff200;
 }
 
 .site-footer p {
+	margin-top: 12px;
 	margin-bottom: 0;
+}
+
+.site-footer .menu-item {
+	text-transform: uppercase;
+	padding: 0 25px;
+	font-weight: 500;
+	display: inline;
 }
 
 
