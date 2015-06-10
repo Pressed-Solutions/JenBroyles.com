@@ -365,5 +365,7 @@ add_image_size( 'home_featured', 708, 428, true );
 // Add menu to footer
 function add_footer_menu() {
     wp_nav_menu( array( 'name' => 'main-menu' ) );
+    echo '<p>&copy;' . date( 'Y' ) . ' Jen Broyles. All rights reserved.</p>';
 }
+remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'add_footer_menu' );
