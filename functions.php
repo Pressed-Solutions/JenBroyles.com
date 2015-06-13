@@ -370,8 +370,9 @@ function testimonial_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'testimonial_post_type', 0 );
 
-// Add custom thumbnail size for homepage archives
+// Add custom thumbnail size for posts
 add_image_size( 'home_featured', 708, 428, true );
+add_image_size( 'blog_archive', 1570, 770, true );
 
 // Add menu to footer
 function add_footer_menu() {
