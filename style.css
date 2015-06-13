@@ -1617,12 +1617,26 @@ h3.secondary-header {
 	margin-left: 40px;
 }
 
+.flexbox .entry-content ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 .entry-content ol > li {
 	list-style-type: decimal;
 }
 
 .entry-content ul > li {
 	list-style-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#fa806c"/></svg>');
+}
+
+.flexbox .entry-content ul > li {
+    width: 50%;
 }
 
 .entry-content ol ol,
