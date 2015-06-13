@@ -1016,6 +1016,9 @@ Site Header
 		height: 523px;
 		width: 66%;
 	}
+    .no-flexbox .site-header-banner-image {
+        width: 100%;
+    }
 	.site-header-banner .widget {
 		margin: 50px auto;
 	}
@@ -1034,6 +1037,9 @@ Site Header
 	.beautiful .site-header-banner-image {
 		width: 60%;
 	}
+    .no-flexbox .site-header-banner-image {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -1216,6 +1222,11 @@ Site Header
 
 .header-widget-area .widget + .widget {
 	border-left: 1px solid #c8c8c8;
+}
+
+.no-flexbox .header-widget-area .widget + .widget {
+	border-left: 0;
+    padding-top: 8px;
 }
 
 .header-widget-area a {
@@ -1432,14 +1443,27 @@ h3.secondary-header {
     margin-bottom: 40px;
 }
 
+.no-flexbox .home-blog-wrapper:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
 .home-blog-wrapper .post {
     background-color: #64c7c9;
     text-align: center;
 }
 
+.no-flexbox .home-blog-wrapper .post {
+    float: left;
+}
+
 @media screen and (min-width: 768px) {
     .home-blog-wrapper .post {
         width: 33%;
+    }
+    .no-flexbox .home-blog-wrapper .post {
+        width: 31%;
     }
 
 	.home-blog-wrapper article.post + article.post {
