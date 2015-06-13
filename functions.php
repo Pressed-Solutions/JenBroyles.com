@@ -287,8 +287,19 @@ add_action( 'genesis_after_header', 'custom_header_banner' );
 function custom_header_banner() {
     global $post;
 
+    // show different image on blog and individual posts
+    if ( is_home() OR is_single() ) {
+        echo '<div class="site-header-banner">';
+        echo '<div class="site-header-banner-image" style="';
+        echo 'background-image: url(\'' . get_field( 'banner_image', 9 ) . '\');';
+        echo '"></div>';
+        echo '<div class="signup-form">';
+            genesis_widget_area( 'banner_widget_area' );
+        echo '</div>';
+        echo '</div>';
+    }
     // do not show on posts or archives
-    if ( ( ! is_single() ) AND ( ! is_archive() ) ) {
+    elseif ( ( ! is_single() ) AND ( ! is_archive() ) ) {
         echo '<div class="site-header-banner">';
         echo '<div class="site-header-banner-image" style="';
         if ( get_field( 'banner_image', $post->ID ) ) {
