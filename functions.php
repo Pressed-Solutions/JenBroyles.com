@@ -288,7 +288,7 @@ function custom_header_banner() {
     global $post;
 
     // do not show on posts or archives
-    if ( ! is_single() AND ( ! is_post_type_archive() ) ) {
+    if ( ( ! is_single() ) AND ( ! is_archive() ) ) {
         echo '<div class="site-header-banner">';
         echo '<div class="site-header-banner-image" style="';
         if ( get_field( 'banner_image', $post->ID ) ) {
