@@ -45,7 +45,7 @@ function home_loop() {
 
     echo '<h2 class="primary-header">Testimonials</h2>';
     echo '<h3 class="secondary-header">Praises for Jen</h3>';
-    echo '<section class="home-testimonial-wrapper">';
+    echo '<section class="testimonial-wrapper">';
     // custom loop
     $blog_args = ( array(
         'post_type'         => 'testimonial',
