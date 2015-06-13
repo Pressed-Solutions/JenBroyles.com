@@ -804,6 +804,36 @@ Widgets
 	margin-bottom: 0;
 }
 
+.sidebar-primary .widget_text:first-of-type {
+    background: url('http://jenbroyles.pressedsolutions.com/wp-content/uploads/2015/06/Schedule-free-call.jpg') no-repeat top left / cover;
+    padding: 25px;
+}
+
+.sidebar-primary .widget_text:first-of-type h4 {
+    text-transform: initial;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.sidebar-primary .widget_text:first-of-type .secondary-header {
+    color: #FFF200;
+}
+
+.sidebar-primary .widget_text:first-of-type .button {
+    background-color: #fff200;
+    color: #000;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+}
+
+.sidebar-primary .widget_text:first-of-type .button:hover,
+.sidebar-primary .widget_text:first-of-type .button:active {
+	background-color: #64c7c9;
+	color: white;
+}
+
 
 /* Featured Content
 --------------------------------------------- */
