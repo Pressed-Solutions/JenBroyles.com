@@ -267,7 +267,7 @@ add_action( 'widgets_init', function(){
     register_widget( 'WoocommerceCartCount' );
 });
 
-// Ensure cart contents update when products are added to the cart via AJAX (place the following in functions.php)
+// Ensure cart contents update when products are added to the cart via AJAX
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
@@ -369,3 +369,41 @@ function add_footer_menu() {
 }
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'add_footer_menu' );
+
+// Add “Last Testimonial” widget
+class LastTestimonialWidget extends WP_Widget {
+    function LastTestimonialWidget() {
+        // Instantiate the parent object
+        parent::__construct( false, 'Last Testimonial' );
+    }
+
+    function widget( $args, $instance ) {
+        echo '<section class="widget last-testimonial">
+        <div class="widget_wrap">';
+        echo '<h2 class="primary-header">Testimonials</h2>';
+        echo '<h3 class="secondary-header">Praises for Jen</h3>';
+        echo '<section class="testimonial-wrapper">';
+        // custom loop
+        $blog_args = ( array(
+            'post_type'         => 'testimonial',
+            'posts_per_page'    => 1,
+        ));
+        $blog_query = new WP_Query( $blog_args );
+        while ( $blog_query->have_posts() ) {
+            $blog_query->the_post();
+
+            echo '<article id="' . get_the_ID() . '" class="' . implode( ' ', get_post_class() ) . '" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">' . "\n";
+                echo '<p>' . get_the_content() . '</p>' . "\n";
+                echo '<h3 class="entry-title" itemprop="headline">' . get_the_title() . '</h3>' . "\n";
+            echo '</article>' . "\n";
+        }
+        echo '</section>';
+        wp_reset_postdata();
+        echo '</div>
+        </section>';
+    }
+}
+add_action( 'widgets_init', function(){
+    register_widget( 'LastTestimonialWidget' );
+});
+
