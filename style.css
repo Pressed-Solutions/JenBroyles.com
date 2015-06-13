@@ -997,7 +997,7 @@ Site Header
 	padding: 40px 0;
 }
 
-.beautiful .site-header-banner {
+.page .site-header-banner {
 	background-color: #fa806c;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1005,22 +1005,48 @@ Site Header
 	display: flex;
 }
 
-.beautiful .site-header-banner-image {
+.blog .site-header-banner {
+	background-color: #64c7c9;
+}
+
+.page .site-header-banner-image {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right;
 }
 
+.blog .site-header-banner-image {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+
+.signup-form .widget-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
 @media screen and (min-width: 1024px) {
-	.beautiful .site-header-banner-image {
+	.page .site-header-banner-image {
 		height: 523px;
 		width: 66%;
 	}
-    .no-flexbox .site-header-banner-image {
+    .no-flexbox .page .site-header-banner-image {
         width: 100%;
     }
-	.site-header-banner .widget {
+    .blog .site-header-banner-image {
+		height: 384px;
+    }
+	.page .site-header-banner .widget {
 		margin: 50px auto;
+	}
+	.blog .site-header-banner .widget {
+		margin: 0 auto;
+		padding: 25px;
 	}
 	.site-header-banner .widget-title,
 	.site-header-banner h2,
@@ -1034,15 +1060,21 @@ Site Header
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.beautiful .site-header-banner-image {
+	.page .site-header-banner-image {
 		width: 60%;
 	}
     .no-flexbox .site-header-banner-image {
         width: 100%;
     }
+    .blog .site-header-banner-image {
+		height: 300px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
+    .blog .site-header-banner-image {
+		height: 150px;
+    }
 	.signup-form .widget {
 		margin: 25px auto;
 	}
@@ -1061,12 +1093,12 @@ Site Header
 }
 
 @media screen and (max-width: 767px) {
-	.beautiful .site-header-banner {
+	.page .site-header-banner {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
-	.beautiful .site-header-banner-image {
+	.page .site-header-banner-image {
 		height: 300px;
 		width: 100%;
 	}
@@ -1076,7 +1108,7 @@ Site Header
 }
 
 @media screen and (max-width: 500px) {
-	.beautiful .site-header-banner-image {
+	.page .site-header-banner-image {
 		height: 200px;
 	}
 }
