@@ -1005,7 +1005,8 @@ Site Header
 	display: flex;
 }
 
-.blog .site-header-banner {
+.blog .site-header-banner,
+.single .site-header-banner {
 	background-color: #64c7c9;
 }
 
@@ -1015,18 +1016,21 @@ Site Header
 	background-position: right;
 }
 
-.blog .site-header-banner-image {
+.blog .site-header-banner-image,
+.single .site-header-banner-image {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
 }
 
-.blog .signup-form {
+.blog .signup-form,
+.single .signup-form {
     background-color: #fa806c;
     padding: 25px;
 }
 
-.blog .signup-form .widget-area {
+.blog .signup-form .widget-area,
+.single .signup-form .widget-area {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -1035,7 +1039,8 @@ Site Header
 	margin: 0 auto;
 }
 
-.blog .signup-form input[type="submit"] {
+.blog .signup-form input[type="submit"],
+.single .signup-form input[type="submit"] {
     font-size: 14px;
 }
 
@@ -1047,29 +1052,37 @@ Site Header
     .no-flexbox .page .site-header-banner-image {
         width: 100%;
     }
-    .blog .site-header-banner-image {
+    .blog .site-header-banner-image,
+    .single .site-header-banner-image {
 		height: 384px;
     }
 	.page .site-header-banner .widget {
 		margin: 50px auto;
 	}
-	.blog .site-header-banner .widget {
+	.blog .site-header-banner .widget,
+	.single .site-header-banner .widget {
 		margin: 0 auto;
 	}
-	.blog .signup-form .widget:first-of-type {
+	.blog .signup-form .widget:first-of-type,
+	.single .signup-form .widget:first-of-type {
 		width: 33%;
 	}
-	.blog .signup-form .widget:last-of-type {
+	.blog .signup-form .widget:last-of-type,
+	.single .signup-form .widget:last-of-type {
 		width: 66%;
 	}
 	.blog .signup-form input,
-	.blog .signup-form input[type="submit"] {
+	.single .signup-form input,
+	.blog .signup-form input[type="submit"],
+	.single .signup-form input[type="submit"] {
 		width: 31%;
 	}
-	.blog .signup-form input[type="submit"] {
+	.blog .signup-form input[type="submit"],
+	.single .signup-form input[type="submit"] {
 		padding: 20px 10px;
 	}
-	.blog .signup-form .nospam {
+	.blog .signup-form .nospam,
+	.single .signup-form .nospam {
 		display: none;
 	}
 	.site-header-banner .widget-title,
@@ -1090,13 +1103,15 @@ Site Header
     .no-flexbox .site-header-banner-image {
         width: 100%;
     }
-    .blog .site-header-banner-image {
+    .blog .site-header-banner-image,
+    .single .site-header-banner-image {
 		height: 300px;
     }
 }
 
 @media screen and (max-width: 1023px) {
-    .blog .site-header-banner-image {
+    .blog .site-header-banner-image,
+    .single .site-header-banner-image {
 		height: 150px;
     }
 	.signup-form .widget {
@@ -1135,7 +1150,8 @@ Site Header
 	.page .site-header-banner-image {
 		height: 200px;
 	}
-	.blog .signup-form .widget-area {
+	.blog .signup-form .widget-area,
+	.single .signup-form .widget-area {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
