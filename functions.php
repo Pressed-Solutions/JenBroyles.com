@@ -378,11 +378,10 @@ class LastTestimonialWidget extends WP_Widget {
     }
 
     function widget( $args, $instance ) {
-        echo '<section class="widget last-testimonial">
-        <div class="widget_wrap">';
+        echo '<section class="widget testimonial-wrapper">
+        <div class="widget_wrap testimonial">';
         echo '<h2 class="primary-header">Testimonials</h2>';
         echo '<h3 class="secondary-header">Praises for Jen</h3>';
-        echo '<section class="testimonial-wrapper">';
         // custom loop
         $blog_args = ( array(
             'post_type'         => 'testimonial',
@@ -392,15 +391,14 @@ class LastTestimonialWidget extends WP_Widget {
         while ( $blog_query->have_posts() ) {
             $blog_query->the_post();
 
-            echo '<article id="' . get_the_ID() . '" class="' . implode( ' ', get_post_class() ) . '" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">' . "\n";
+            echo '<article id="' . get_the_ID() . '">' . "\n";
                 echo '<p>' . get_the_content() . '</p>' . "\n";
                 echo '<h3 class="entry-title" itemprop="headline">' . get_the_title() . '</h3>' . "\n";
             echo '</article>' . "\n";
         }
         echo '</section>';
         wp_reset_postdata();
-        echo '</div>
-        </section>';
+        echo '</div>';
     }
 }
 add_action( 'widgets_init', function(){

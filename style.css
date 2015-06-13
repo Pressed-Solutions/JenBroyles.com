@@ -1546,12 +1546,12 @@ h3.secondary-header {
 }
 
 @media screen and (min-width: 768px) {
-    .testimonial {
+    .home .testimonial {
         margin-left: 25px;
         margin-right: 25px;
     }
 
-    .testimonial-wrapper article.testimonial:last-child {
+    .home .testimonial-wrapper article.testimonial:last-child {
         margin-bottom: 40px;
     }
 }
