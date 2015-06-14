@@ -676,6 +676,15 @@ Common Classes
 	margin-bottom: 24px;
 }
 
+.widget_categories .widget-title {
+    text-align: left;
+    text-transform: initial;
+}
+
+.widget_categories a {
+    color: black;
+}
+
 /* WordPress
 --------------------------------------------- */
 
@@ -785,7 +794,7 @@ Widgets
 }
 
 .widget li {
- 	list-style-type: none;
+    list-style-type: none;
 }
 
 .widget ol > li {
