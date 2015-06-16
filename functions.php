@@ -427,7 +427,7 @@ genesis_register_sidebar( array(
 // Display on blog and single views
 add_action( 'get_header', 'blog_sidebar_logic' );
 function blog_sidebar_logic() {
-    if ( is_page_template( 'page_blog.php' ) || is_archive() || is_single() ) {
+    if ( is_home() || is_archive() || is_single() ) {
         remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
         add_action( 'genesis_after_content', 'blog_get_sidebar' );
     }
