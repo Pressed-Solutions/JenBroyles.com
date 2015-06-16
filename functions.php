@@ -435,3 +435,10 @@ function blog_sidebar_logic() {
 function blog_get_sidebar() {
     get_sidebar( 'blog' );
 }
+
+// Add “read more” links to excerpts on archive page
+add_action( 'the_excerpt', 'add_read_more_link' );
+function add_read_more_link( $output ) {
+    global $post;
+    return $output . '<a href="' . get_permalink( $post->ID ) . '" class="read-more" title="continue reading">continue reading</a>';
+}
