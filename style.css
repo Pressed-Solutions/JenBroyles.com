@@ -1771,6 +1771,7 @@ h3.secondary-header {
 
 .flexbox .entry-content ul > li {
     width: 50%;
+    padding-right: 1em;
 }
 
 .entry-content ol ol,
