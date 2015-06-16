@@ -511,8 +511,21 @@ Structure and Layout
 /* Sidebar */
 
 .sidebar {
-	float: right;
 	width: 360px;
+}
+
+@media screen and (min-width: 1024px) {
+	.sidebar {
+		float: right;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.sidebar {
+		display: block;
+		margin: 0 auto;
+		clear: both;
+	}
 }
 
 .sidebar-content .sidebar {
@@ -847,6 +860,11 @@ Widgets
 .widget#text-16 .button:active {
 	background-color: #64c7c9;
 	color: white;
+}
+
+#text-18 img,
+#text-19 img {
+    width: 100%;
 }
 
 
@@ -1699,6 +1717,7 @@ h3.secondary-header {
 
 .entry,
 .page.page-template-page_blog-php .entry {
+	/* border-bottom: 1px dotted #ddd; */
 	padding-bottom: 40px;
 	margin-bottom: 80px;
 }
