@@ -1085,12 +1085,18 @@ Site Header
 
 @media screen and (min-width: 1024px) {
 	.page .site-header-banner-image {
-		height: 523px;
-		width: 66%;
+		min-height: 523px;
+		width: 60%;
 	}
     .no-flexbox .page .site-header-banner-image {
         width: 100%;
     }
+    .page .signup-form {
+    	width: 40%;
+    }
+	.signup-form .widget {
+		width: 60%;
+	}
     .blog .site-header-banner-image,
     .single .site-header-banner-image {
 		height: 384px;
@@ -1141,6 +1147,9 @@ Site Header
 	}
     .no-flexbox .site-header-banner-image {
         width: 100%;
+    }
+    .page .signup-form {
+    	width: 40%;
     }
     .blog .site-header-banner-image,
     .single .site-header-banner-image {
@@ -1197,8 +1206,8 @@ Site Header
 	}
 }
 
-.signup-form .widget {
-	width: 60%;
+.page .signup-form .widget {
+	width: 80%;
 }
 
 .signup-form .widget-title {
