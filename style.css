@@ -60,6 +60,7 @@
 		- After Entry
 		- Pagination
 		- Comments
+        - Specific Pages
 	- Sidebar
 	- Footer Widgets
 	- Site Footer
@@ -1923,6 +1924,13 @@ p.form-submit {
 
 .ping-list .reply {
 	display: none;
+}
+
+
+/* Specific Page Content
+--------------------------------------------- */
+.post-32 .wp-caption {
+    min-height: 360px;
 }
 
 
