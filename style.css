@@ -1688,6 +1688,7 @@ h3.secondary-header {
 }
 
 .testimonial-wrapper article.testimonial,
+.single .content .testimonial,
 .testimonial {
     padding: 25px;
     background-color: #F0F4F6;
