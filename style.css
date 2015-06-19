@@ -1705,7 +1705,9 @@ h3.secondary-header {
     }
 }
 
-.testimonial-wrapper .testimonial::before {
+.testimonial-wrapper .testimonial::before,
+.archive .testimonial::before,
+.single .testimonial::before {
   content: "";
   position: absolute;
   top: 0;
