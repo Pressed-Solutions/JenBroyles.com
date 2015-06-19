@@ -1791,7 +1791,7 @@ h3.secondary-header {
 	list-style-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#fa806c"/></svg>');
 }
 
-.flexbox .entry-content ul > li {
+.flexbox .entry-content ul.columns > li {
     width: 50%;
     padding-right: 2em;
 }
