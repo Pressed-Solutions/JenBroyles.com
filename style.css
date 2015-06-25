@@ -1117,10 +1117,12 @@ Site Header
 		width: 66%;
 	}
 	.blog .signup-form input,
-	.single .signup-form input,
-	.blog .signup-form input[type="submit"],
-	.single .signup-form input[type="submit"] {
-		width: 31%;
+	.single .signup-form input {
+		width: 49%;
+	}
+	.blog .signup-form input:nth-of-type(2n),
+	.singe .signup-form input:nth-of-type(2n) {
+		margin-left: 1%;
 	}
 	.blog .signup-form input[type="submit"],
 	.single .signup-form input[type="submit"] {
@@ -1174,6 +1176,9 @@ Site Header
 	.signup-form .widget input {
 		font-size: small;
 	}
+	.signup-form input[type="submit"] {
+		width: 100%;
+	}
 	.signup-form p.small {
 		font-size: 12px;
 	}
@@ -1225,24 +1230,30 @@ Site Header
 	margin-bottom: 10px;
 }
 
-.mc4wp-form .flex-wrapper {
+.page .mc4wp-form form {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-.mc4wp-form input[type="text"].half-width {
-	width: 50%;
+.page .mc4wp-form .half-width {
+	width: 49%;
 }
 
-.mc4wp-form input[type="text"].half-width + .half-width {
-	margin-left: 0.5em;
+.page .mc4wp-form .half-width + .half-width {
+	margin-left: 2%;
+}
+
+.page .mc4wp-form input[type='submit'] {
+	width: 100%;
 }
 
 .mc4wp-form input[type='submit'] {
 	background-color: #fff200;
-	width: 100%;
 	color: #343c47;
 	font-weight: bold;
 }
