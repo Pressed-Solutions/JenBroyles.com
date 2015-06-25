@@ -1171,10 +1171,10 @@ Site Header
 	.footer-widgets-1 h4 {
 		font-size: 18px;
 	}
-	.sign-up .widget input {
+	.signup-form .widget input {
 		font-size: small;
 	}
-	.sign-up p.small {
+	.signup-form p.small {
 		font-size: 12px;
 	}
 }
@@ -1220,25 +1220,40 @@ Site Header
 	color: #fff200;
 }
 
-.sign-up input {
+.mc4wp-form input {
 	border-radius: 5px;
 	margin-bottom: 10px;
 }
 
-.sign-up input[type='submit'] {
+.mc4wp-form .flex-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mc4wp-form input[type="text"].half-width {
+	width: 50%;
+}
+
+.mc4wp-form input[type="text"].half-width + .half-width {
+	margin-left: 0.5em;
+}
+
+.mc4wp-form input[type='submit'] {
 	background-color: #fff200;
 	width: 100%;
 	color: #343c47;
 	font-weight: bold;
 }
 
-.sign-up input[type='submit']:hover,
-.sign-up input[type='submit']:active {
+.mc4wp-form input[type='submit']:hover,
+.mc4wp-form input[type='submit']:active {
 	background-color: #64c7c9;
 	color: white;
 }
 
-.sign-up p.small {
+.mc4wp-form p.small {
 	text-align: center;
 	color: white;
 }
