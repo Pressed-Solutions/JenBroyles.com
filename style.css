@@ -368,7 +368,7 @@ textarea {
 	color: #666;
 	font-size: 18px;
 	font-weight: 300;
-	padding: 16px;
+	padding: 14px;
 	width: 100%;
 }
 
@@ -1126,7 +1126,7 @@ Site Header
 	}
 	.blog .signup-form input[type="submit"],
 	.single .signup-form input[type="submit"] {
-		padding: 20px 10px;
+		padding: 18px 10px;
 	}
 	.blog .signup-form .nospam,
 	.single .signup-form .nospam {
@@ -1221,8 +1221,16 @@ Site Header
 	font-weight: 300;
 }
 
-.signup-form .secondary-header {
+.signup-form .secondary-header,
+#text-15 h4 {
 	color: #fff200;
+}
+
+#text-15 h3 {
+    color: white;
+    font-size: 18px;
+    padding-right: 1em;
+    margin-bottom: 0;
 }
 
 .mc4wp-form input {
@@ -1579,11 +1587,16 @@ h2.primary-header {
 }
 
 .secondary-header,
-h3.secondary-header {
+h3.secondary-header,
+#text-15 h4 {
 	text-align: center;
 	font-family: 'Pacifico', cursive;
 	font-size: 24px;
     line-height: 1.5;
+}
+
+.secondary-header,
+h3.secondary-header {
 	color: #fa806c;
 }
 
