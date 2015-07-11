@@ -1233,12 +1233,56 @@ Site Header
     margin-bottom: 0;
 }
 
-.mc4wp-form input {
+.yks-mailchimpFormDiv .yks-mailchimpFormDivRow,
+.yks-mailchimpFormDiv .yks-mailchimpFormDivSubmit {
+    margin: 0;
+}
+
+.yks-mailchimpFormDiv label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.yks-mailchimpFormDiv input {
 	border-radius: 5px;
 	margin-bottom: 10px;
 }
 
-.page .mc4wp-form form {
+.page .yks-mailchimpFormDiv input[type='submit'] {
+	width: 100%;
+}
+
+.yks-mailchimpFormDiv input[type='submit'] {
+	background-color: #fff200;
+	color: #343c47;
+	font-weight: bold;
+}
+
+.yks-mailchimpFormDiv input[type='submit']:hover,
+.yks-mailchimpFormDiv input[type='submit']:active {
+	background-color: #64c7c9;
+	color: white;
+}
+
+/* header form */
+#text-7 p.small {
+	text-align: center;
+	color: white;
+}
+
+/* footer signup form */
+#text-9 .widget-title {
+    color: white;
+    margin-bottom: 0;
+}
+
+#yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDiv {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1248,34 +1292,8 @@ Site Header
     flex-wrap: wrap;
 }
 
-.page .mc4wp-form .half-width {
-	width: 49%;
-}
-
-.page .mc4wp-form .half-width + .half-width {
-	margin-left: 2%;
-}
-
-.page .mc4wp-form input[type='submit'] {
-	width: 100%;
-}
-
-.mc4wp-form input[type='submit'] {
-	background-color: #fff200;
-	color: #343c47;
-	font-weight: bold;
-}
-
-.mc4wp-form input[type='submit']:hover,
-.mc4wp-form input[type='submit']:active {
-	background-color: #64c7c9;
-	color: white;
-}
-
-.mc4wp-form p.small,
-.mc4wp-form .mc4wp-alert {
-	text-align: center;
-	color: white;
+#yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDivRow:nth-of-type(4) {
+    display: none;
 }
 
 /* Title Area
@@ -2067,9 +2085,8 @@ Footer Widgets
 }
 
 @media screen and (min-width: 768px) {
-	.footer-widgets-1 input,
-	.footer-widgets-1 input[type='submit'] {
-		width: 48%;
+	.footer-widgets-1 .yks-mailchimpFormDivRow {
+		width: 32%;
 		margin-right: 5px;
 	}
 }
@@ -2155,17 +2172,6 @@ Media Queries
 	.content,
 	.site-header .widget-area {
 		width: 620px;
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3,
-	.sidebar {
-		width: 300px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 30px;
 	}
 
 	.split-sidebar-left,
