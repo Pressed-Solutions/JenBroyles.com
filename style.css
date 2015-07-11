@@ -1116,10 +1116,6 @@ Site Header
 	.single .signup-form .widget:last-of-type {
 		width: 66%;
 	}
-	.blog .signup-form input,
-	.single .signup-form input {
-		width: 49%;
-	}
 	.blog .signup-form input:nth-of-type(2n),
 	.singe .signup-form input:nth-of-type(2n) {
 		margin-left: 1%;
@@ -1127,10 +1123,7 @@ Site Header
 	.blog .signup-form input[type="submit"],
 	.single .signup-form input[type="submit"] {
 		padding: 18px 10px;
-	}
-	.blog .signup-form .nospam,
-	.single .signup-form .nospam {
-		display: none;
+		width: 100%;
 	}
 	.site-header-banner .widget-title,
 	.site-header-banner h2,
@@ -1282,6 +1275,8 @@ Site Header
     margin-bottom: 0;
 }
 
+.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDiv,
+.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDiv,
 #yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDiv {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1292,6 +1287,7 @@ Site Header
     flex-wrap: wrap;
 }
 
+#yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:nth-of-type(4),
 #yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDivRow:nth-of-type(4) {
     display: none;
 }
@@ -2084,10 +2080,26 @@ Footer Widgets
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
+	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
 	.footer-widgets-1 .yks-mailchimpFormDivRow {
 		width: 32%;
 		margin-right: 5px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
+	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
+	.footer-widgets-1 .yks-mailchimpFormDivRow {
+		width: 48%;
+		margin-right: 5px;
+	}
+	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:last-of-type,
+	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:last-of-type {
+    	display: block;
+    	width: 97%;
 	}
 }
 
