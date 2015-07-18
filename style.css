@@ -1275,8 +1275,8 @@ Site Header
     margin-bottom: 0;
 }
 
-.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDiv,
-.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDiv,
+.blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDiv,
+.single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDiv,
 #yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDiv {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1287,7 +1287,7 @@ Site Header
     flex-wrap: wrap;
 }
 
-#yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:nth-of-type(4),
+#yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:nth-of-type(5),
 #yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDivRow:nth-of-type(4) {
     display: none;
 }
@@ -2081,8 +2081,8 @@ Footer Widgets
 }
 
 @media screen and (min-width: 1024px) {
-	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
-	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
+	.blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
+	.single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
 	.footer-widgets-1 .yks-mailchimpFormDivRow {
 		width: 32%;
 		margin-right: 5px;
@@ -2090,14 +2090,14 @@ Footer Widgets
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
-	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow,
+	.blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
+	.single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
 	.footer-widgets-1 .yks-mailchimpFormDivRow {
 		width: 48%;
 		margin-right: 5px;
 	}
-	.blog #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:last-of-type,
-	.single #yks-mailchimp-form_0-cb6b2cf947 .yks-mailchimpFormDivRow:last-of-type {
+	.blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:last-of-type,
+	.single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:last-of-type {
     	display: block;
     	width: 97%;
 	}
