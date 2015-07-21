@@ -29,6 +29,9 @@ wc_print_notices(); ?>
 
 <?php do_action( 'woocommerce_before_my_account' ); ?>
 
+<h2>Heal Your Digestion Videos</h2>
+<p><a href="<?php echo site_url( '/heal-your-digestion-home/' ); ?>">Access the course</a></p>
+
 <?php wc_get_template( 'myaccount/my-downloads.php' ); ?>
 
 <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
