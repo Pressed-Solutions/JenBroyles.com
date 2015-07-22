@@ -446,3 +446,6 @@ function add_read_more_link( $output ) {
     global $post;
     return $output . '<a href="' . get_permalink( $post->ID ) . '" class="read-more" title="continue reading">continue reading</a>';
 }
+
+// check "create user account" by default
+add_filter( 'woocommerce_create_account_default_checked', function( $isChecked) { return true; } );
