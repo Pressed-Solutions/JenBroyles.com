@@ -267,17 +267,6 @@ add_action( 'widgets_init', function(){
     register_widget( 'WoocommerceCartCount' );
 });
 
-// Ensure cart contents update when products are added to the cart via AJAX
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
-
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-    echo '<section class="widget woocommerce-cart-count">
-    <div class="widget_wrap">';
-	return '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="View your shopping cart"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
-    echo '</div>
-    </section>';
-}
-
 // Move primary nav into header
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
