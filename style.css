@@ -1418,7 +1418,6 @@ Site Header
 	line-height: 0.1;
 }
 
-
 /*
 Site Navigation
 ---------------------------------------------------------------------------------------------------- */
@@ -2140,6 +2139,10 @@ Footer Widgets
 /*
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
+
+.woocommerce-checkout address + .clear {
+    margin-top: 2em;
+}
 
 .site-footer {
 	font-size: 16px;
