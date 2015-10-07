@@ -1442,12 +1442,12 @@ Site Header
     margin-bottom: 0;
 }
 
-.yks-mailchimpFormDiv .yks-mailchimpFormDivRow,
-.yks-mailchimpFormDiv .yks-mailchimpFormDivSubmit {
+.yikes-easy-mc-form label,
+.yikes-easy-mc-form .yikes-easy-mc-submit-button {
     margin: 0;
 }
 
-.yks-mailchimpFormDiv label {
+.yikes-easy-mc-form span[class$="label"] {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -1458,23 +1458,28 @@ Site Header
     width: 1px;
 }
 
-.yks-mailchimpFormDiv input {
+.yikes-easy-mc-form input,
+.yikes-easy-mc-form button {
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
-.page .yks-mailchimpFormDiv input[type='submit'] {
+.yikes-easy-mc-form input {
+    margin-bottom: 10px;
+    border: none !important;
+}
+
+.page .yikes-easy-mc-form .yikes-easy-mc-submit-button {
     width: 100%;
 }
 
-.yks-mailchimpFormDiv input[type='submit'] {
+.yikes-easy-mc-form .yikes-easy-mc-submit-button {
     background-color: #fff200;
     color: #343c47;
     font-weight: bold;
 }
 
-.yks-mailchimpFormDiv input[type='submit']:hover,
-.yks-mailchimpFormDiv input[type='submit']:active {
+.yikes-easy-mc-form .yikes-easy-mc-submit-button:hover,
+.yikes-easy-mc-form .yikes-easy-mc-submit-button:active {
     background-color: #64c7c9;
     color: white;
 }
@@ -1495,9 +1500,10 @@ Site Header
     margin-bottom: 0;
 }
 
-.blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDiv,
-.single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDiv,
-#yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDiv {
+.blog .yikes-mailchimp-container-1 label,
+.single .yikes-mailchimp-container-1 label,
+.blog .yikes-mailchimp-container-1 button,
+.single .yikes-mailchimp-container-1 button {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1505,11 +1511,6 @@ Site Header
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-}
-
-#yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:nth-of-type(5),
-#yks-mailchimp-form_0-481a3ae3db .yks-mailchimpFormDivRow:nth-of-type(4) {
-    display: none;
 }
 
 
@@ -2315,23 +2316,29 @@ Footer Widgets
 }
 
 @media screen and (min-width: 1024px) {
-    .blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
-    .single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
-    .footer-widgets-1 .yks-mailchimpFormDivRow {
+    .blog .yikes-easy-mc-form label,
+    .blog .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+    .single .yikes-easy-mc-form label,
+    .single .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+    .footer-widgets-1 .yikes-easy-mc-form label,
+    .footer-widgets-1 .yikes-easy-mc-form .yikes-easy-mc-submit-button {
         width: 32%;
         margin-right: 5px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
-    .single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow,
-    .footer-widgets-1 .yks-mailchimpFormDivRow {
+    .blog .yikes-easy-mc-form label,
+    .blog .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+    .single .yikes-easy-mc-form label,
+    .single .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+    .footer-widgets-1 .yikes-easy-mc-form label,
+    .footer-widgets-1 .yikes-easy-mc-form .yikes-easy-mc-submit-button {
         width: 48%;
         margin-right: 5px;
     }
-    .blog #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:last-of-type,
-    .single #yks-mailchimp-form_0-034c0c4091 .yks-mailchimpFormDivRow:last-of-type {
+    .blog .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+    .single .yikes-easy-mc-form .yikes-easy-mc-submit-button {
         display: block;
         width: 97%;
     }
