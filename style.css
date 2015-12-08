@@ -643,6 +643,12 @@ input:hover[type="submit"],
     display: inline-block;
 }
 
+.button.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .button.yellow, .button.yellow-hover:hover    { background-color: #fff200; color: #343c47; }
 .button.green, .button.green-hover:hover      { background-color: #64c7c9; color: white; }
 .button-pink, .button.pink-hover:hover        { background-color: #fa806c; color: white; }
