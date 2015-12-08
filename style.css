@@ -643,9 +643,9 @@ input:hover[type="submit"],
     display: inline-block;
 }
 
-.button.yellow, .button.yellow-hover:hover    { background-color: #fff200; }
-.button.green, .button.green-hover:hover      { background-color: #64c7c9; }
-.button-pink, .button.pink-hover:hover        { background-color: #fa806c; }
+.button.yellow, .button.yellow-hover:hover    { background-color: #fff200; color: #343c47; }
+.button.green, .button.green-hover:hover      { background-color: #64c7c9; color: white; }
+.button-pink, .button.pink-hover:hover        { background-color: #fa806c; color: white; }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
