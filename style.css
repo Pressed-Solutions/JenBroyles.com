@@ -1334,17 +1334,13 @@ Site Header
     .single .site-header-banner .widget {
         margin: 0 auto;
     }
-    .blog .signup-form .widget:first-of-type,
-    .single .signup-form .widget:first-of-type {
-        width: 33%;
+    .blog .signup-form .widget,
+    .single .signup-form .widget {
+        width: 50%;
     }
     .blog .signup-form .widget:last-of-type,
     .single .signup-form .widget:last-of-type {
-        width: 66%;
-    }
-    .blog .signup-form input:nth-of-type(2n),
-    .singe .signup-form input:nth-of-type(2n) {
-        margin-left: 1%;
+        padding-top: 4.5em;
     }
     .blog .signup-form input[type="submit"],
     .single .signup-form input[type="submit"] {
@@ -1376,12 +1372,20 @@ Site Header
     .single .site-header-banner-image {
         height: 300px;
     }
+    .blog .signup-form .widget:last-of-type,
+    .single .signup-form .widget:last-of-type {
+        padding-top: 1.5em;
+    }
 }
 
 @media screen and (max-width: 1023px) {
     .blog .site-header-banner-image,
     .single .site-header-banner-image {
         height: 150px;
+    }
+    .blog .signup-form .widget:last-of-type,
+    .single .signup-form .widget:last-of-type {
+        padding-top: 4.5em;
     }
     .signup-form .widget {
         margin: 25px auto;
@@ -1427,6 +1431,10 @@ Site Header
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    }
+    .blog .signup-form .widget:last-of-type,
+    .single .signup-form .widget:last-of-type {
+        padding-top: 0;
     }
 }
 
