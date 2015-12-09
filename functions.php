@@ -438,3 +438,9 @@ function add_read_more_link( $output ) {
 
 // check "create user account" by default
 add_filter( 'woocommerce_create_account_default_checked', function( $isChecked) { return true; } );
+
+// declare Woocommerce support
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
