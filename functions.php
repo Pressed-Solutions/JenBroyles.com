@@ -444,3 +444,10 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+// add message to my account page
+add_action( 'woocommerce_account_content', 'course_access_message' );
+function course_access_message() {
+    echo '<h2>Heal Your Digestion Videos</h2>
+    <p><a href="' . site_url( '/heal-your-digestion-home/' ) . '">Access the course</a></p>';
+}
