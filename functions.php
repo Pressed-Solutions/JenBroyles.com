@@ -370,7 +370,8 @@ add_image_size( 'blog_archive', 1570, 770, true );
 // Add menu to footer
 function add_footer_menu() {
     wp_nav_menu( array( 'name' => 'main-menu' ) );
-    echo '<p>&copy;' . date( 'Y' ) . ' Jen Broyles. All rights reserved. | <a href="/disclaimer/">Disclaimer</a> | <a href="/ftc-disclosure/">Disclosure</a></p>';
+    echo '<p>&copy;' . date( 'Y' ) . ' Jen Broyles. All rights reserved. | <a href="/disclaimer/">Disclaimer</a> | <a href="/ftc-disclosure/">Disclosure</a></p>
+    <p><script type="text/javascript" src="https://www.doterracertifiedsite.com/api/Certificates/Script?domain=www.jenbroyles.com&sealSize=Small"></script></p>';
 }
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'add_footer_menu' );
