@@ -276,23 +276,25 @@ add_action( 'genesis_after_header', 'custom_header_banner' );
 function custom_header_banner() {
 	global $post;
 
-	// show different image on blog and individual posts
-	if ( is_home() || is_single() ) {
-		$background_image = get_field( 'banner_image', 9 );
-	} elseif ( ( ! is_single() ) && ( ! is_archive() ) ) {
-		// do not show on posts or archives
-		if ( get_field( 'banner_image', $post->ID ) ) {
-			$background_image = get_field( 'banner_image', $post->ID );
-		} else {
-			$background_image = get_field( 'banner_image', 8 );
-		}
-	}
+	if ( ! is_single() && ! is_archive() ) {
 
-	echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
-	echo '<div class="signup-form">';
-		genesis_widget_area( 'banner_widget_area' );
-	echo '</div>
-	</div>';
+		// Show image from homepage.
+		if ( is_home() || is_single() ) {
+			$background_image = get_field( 'banner_image', 9 );
+		} else { // Show image from this page (if specified) or blog page (if not).
+			if ( get_field( 'banner_image', $post->ID ) ) {
+				$background_image = get_field( 'banner_image', $post->ID );
+			} else {
+				$background_image = get_field( 'banner_image', 8 );
+			}
+		}
+
+		echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
+		echo '<div class="signup-form">';
+			genesis_widget_area( 'banner_widget_area' );
+		echo '</div>
+		</div>';
+	}
 }
 
 // Add banner widget area
