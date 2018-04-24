@@ -1272,7 +1272,7 @@ Site Header
 .blog .site-header-banner,
 .single .site-header-banner {
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     background-size: cover;
     padding: 1em 0;
 }
