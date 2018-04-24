@@ -287,12 +287,12 @@ function custom_header_banner() {
 			$background_image = get_field( 'banner_image', 8 );
 		}
 	}
-		echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
-		echo '<div class="signup-form">';
-			genesis_widget_area( 'banner_widget_area' );
-		echo '</div>
-		</div>';
-	}
+
+	echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
+	echo '<div class="signup-form">';
+		genesis_widget_area( 'banner_widget_area' );
+	echo '</div>
+	</div>';
 }
 
 // Add banner widget area
