@@ -277,32 +277,21 @@ function custom_header_banner() {
     global $post;
 
     // show different image on blog and individual posts
-    if ( is_home() OR is_single() ) {
-        echo '<div class="site-header-banner">';
-        echo '<div class="site-header-banner-image" style="';
-        echo 'background-image: url(\'' . get_field( 'banner_image', 9 ) . '\');';
-        echo '"></div>';
-        echo '<div class="signup-form">';
-            genesis_widget_area( 'banner_widget_area' );
-        echo '</div>';
-        echo '</div>';
-    }
-    // do not show on posts or archives
-    elseif ( ( ! is_single() ) AND ( ! is_archive() ) ) {
-        echo '<div class="site-header-banner">';
-        echo '<div class="site-header-banner-image" style="';
+    if ( is_home() || is_single() ) {
+        $background_image = get_field( 'banner_image', 9 );
+    } elseif ( ( ! is_single() ) && ( ! is_archive() ) ) {
+        // do not show on posts or archives
         if ( get_field( 'banner_image', $post->ID ) ) {
-            // if there is an image set, use it
-            echo 'background-image: url(\'' . get_field( 'banner_image', $post->ID ) . '\');';
+            $background_image = get_field( 'banner_image', $post->ID );
         } else {
-            // otherwise, default to the home page’s image
-            echo 'background-image: url(\'' . get_field( 'banner_image', 8 ) . '\');';
+            $background_image = get_field( 'banner_image', 8 );
         }
-        echo '"></div>';
+    }
+        echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
         echo '<div class="signup-form">';
             genesis_widget_area( 'banner_widget_area' );
-        echo '</div>';
-        echo '</div>';
+        echo '</div>
+        </div>';
     }
 }
 
