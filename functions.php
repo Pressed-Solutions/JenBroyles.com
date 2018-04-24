@@ -250,21 +250,21 @@ genesis_register_sidebar( array(
 
 // Add Woocommerce cart count widget
 class WoocommerceCartCount extends WP_Widget {
-    function WoocommerceCartCount() {
-        // Instantiate the parent object
-        parent::__construct( false, 'Woocommerce Cart Count' );
-    }
+	function WoocommerceCartCount() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Woocommerce Cart Count' );
+	}
 
-    function widget( $args, $instance ) {
-        echo '<section class="widget woocommerce-cart-count">
-        <div class="widget_wrap">';
-        echo '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="View your shopping cart"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
-        echo '</div>
-        </section>';
-    }
+	function widget( $args, $instance ) {
+		echo '<section class="widget woocommerce-cart-count">
+		<div class="widget_wrap">';
+		echo '<a class="cart-contents" href="' . WC()->cart->get_cart_url() . '" title="View your shopping cart"><span class="dashicons dashicons-cart"></span>' . sprintf (_n( '<span class="count">%d</span> item', '<span class="count">%d</span> items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ). '</a>';
+		echo '</div>
+		</section>';
+	}
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'WoocommerceCartCount' );
+	register_widget( 'WoocommerceCartCount' );
 });
 
 // Move primary nav into header
@@ -274,31 +274,31 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
 // Add custom header images (requires ACF field)
 add_action( 'genesis_after_header', 'custom_header_banner' );
 function custom_header_banner() {
-    global $post;
+	global $post;
 
-    // show different image on blog and individual posts
-    if ( is_home() || is_single() ) {
-        $background_image = get_field( 'banner_image', 9 );
-    } elseif ( ( ! is_single() ) && ( ! is_archive() ) ) {
-        // do not show on posts or archives
-        if ( get_field( 'banner_image', $post->ID ) ) {
-            $background_image = get_field( 'banner_image', $post->ID );
-        } else {
-            $background_image = get_field( 'banner_image', 8 );
-        }
-    }
-        echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
-        echo '<div class="signup-form">';
-            genesis_widget_area( 'banner_widget_area' );
-        echo '</div>
-        </div>';
-    }
+	// show different image on blog and individual posts
+	if ( is_home() || is_single() ) {
+		$background_image = get_field( 'banner_image', 9 );
+	} elseif ( ( ! is_single() ) && ( ! is_archive() ) ) {
+		// do not show on posts or archives
+		if ( get_field( 'banner_image', $post->ID ) ) {
+			$background_image = get_field( 'banner_image', $post->ID );
+		} else {
+			$background_image = get_field( 'banner_image', 8 );
+		}
+	}
+		echo '<div class="site-header-banner" style="background-image: url(\'' . $background_image . '\'">';
+		echo '<div class="signup-form">';
+			genesis_widget_area( 'banner_widget_area' );
+		echo '</div>
+		</div>';
+	}
 }
 
 // Add banner widget area
 genesis_register_sidebar( array(
-    'name'          => 'Banner Widget Area',
-    'id'            => 'banner_widget_area',
+	'name'          => 'Banner Widget Area',
+	'id'            => 'banner_widget_area',
 ));
 
 // Register Custom Post Type Testimonials
@@ -340,10 +340,10 @@ function testimonial_post_type() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-        'rewrite'             => array(
-            'slug'          => 'praise',
-            'with_front'    => 'false',
-        ),
+		'rewrite'             => array(
+			'slug'          => 'praise',
+			'with_front'    => 'false',
+		),
 	);
 	register_post_type( 'testimonial', $args );
 
@@ -358,72 +358,72 @@ add_image_size( 'blog_archive', 1570, 770, true );
 
 // Add menu to footer
 function add_footer_menu() {
-    wp_nav_menu( array( 'name' => 'main-menu' ) );
-    echo '<p>&copy;' . date( 'Y' ) . ' Jen Broyles. All rights reserved. | <a href="/disclaimer/">Disclaimer</a> | <a href="/ftc-disclosure/">Disclosure</a></p>
-    <p><script type="text/javascript" src="https://www.doterracertifiedsite.com/api/Certificates/Script?domain=www.jenbroyles.com&sealSize=Small"></script></p>';
+	wp_nav_menu( array( 'name' => 'main-menu' ) );
+	echo '<p>&copy;' . date( 'Y' ) . ' Jen Broyles. All rights reserved. | <a href="/disclaimer/">Disclaimer</a> | <a href="/ftc-disclosure/">Disclosure</a></p>
+	<p><script type="text/javascript" src="https://www.doterracertifiedsite.com/api/Certificates/Script?domain=www.jenbroyles.com&sealSize=Small"></script></p>';
 }
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'add_footer_menu' );
 
 // Add “Last Testimonial” widget
 class LastTestimonialWidget extends WP_Widget {
-    function LastTestimonialWidget() {
-        // Instantiate the parent object
-        parent::__construct( false, 'Last Testimonial' );
-    }
+	function LastTestimonialWidget() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Last Testimonial' );
+	}
 
-    function widget( $args, $instance ) {
-        echo '<section class="widget testimonial-wrapper">
-        <div class="widget_wrap testimonial">';
-        echo '<h2 class="primary-header">Testimonials</h2>';
-        echo '<h3 class="secondary-header">Praises for Jen</h3>';
-        // custom loop
-        $blog_args = ( array(
-            'post_type'         => 'testimonial',
-            'posts_per_page'    => 1,
-        ));
-        $blog_query = new WP_Query( $blog_args );
-        while ( $blog_query->have_posts() ) {
-            $blog_query->the_post();
+	function widget( $args, $instance ) {
+		echo '<section class="widget testimonial-wrapper">
+		<div class="widget_wrap testimonial">';
+		echo '<h2 class="primary-header">Testimonials</h2>';
+		echo '<h3 class="secondary-header">Praises for Jen</h3>';
+		// custom loop
+		$blog_args = ( array(
+			'post_type'         => 'testimonial',
+			'posts_per_page'    => 1,
+		));
+		$blog_query = new WP_Query( $blog_args );
+		while ( $blog_query->have_posts() ) {
+			$blog_query->the_post();
 
-            echo '<article id="' . get_the_ID() . '">' . "\n";
-                echo '<p>' . get_the_content() . '</p>' . "\n";
-                echo '<h3 class="entry-title" itemprop="headline">' . get_the_title() . '</h3>' . "\n";
-            echo '</article>' . "\n";
-        }
-        echo '</section>';
-        wp_reset_postdata();
-        echo '</div>';
-    }
+			echo '<article id="' . get_the_ID() . '">' . "\n";
+				echo '<p>' . get_the_content() . '</p>' . "\n";
+				echo '<h3 class="entry-title" itemprop="headline">' . get_the_title() . '</h3>' . "\n";
+			echo '</article>' . "\n";
+		}
+		echo '</section>';
+		wp_reset_postdata();
+		echo '</div>';
+	}
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'LastTestimonialWidget' );
+	register_widget( 'LastTestimonialWidget' );
 });
 
 // Add sidebar specifically for blog page
 genesis_register_sidebar( array(
-    'id'            => 'blog-sidebar',
-    'name'          => 'Blog sidebar',
-    'description'   => 'This is shown on the blog and post pages',
+	'id'            => 'blog-sidebar',
+	'name'          => 'Blog sidebar',
+	'description'   => 'This is shown on the blog and post pages',
 ));
 
 // Display on blog and single views
 add_action( 'get_header', 'blog_sidebar_logic' );
 function blog_sidebar_logic() {
-    if ( is_home() || is_archive() || is_single() ) {
-        remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
-        add_action( 'genesis_after_content', 'blog_get_sidebar' );
-    }
+	if ( is_home() || is_archive() || is_single() ) {
+		remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
+		add_action( 'genesis_after_content', 'blog_get_sidebar' );
+	}
 }
 function blog_get_sidebar() {
-    get_sidebar( 'blog' );
+	get_sidebar( 'blog' );
 }
 
 // Add “read more” links to excerpts on archive page
 add_action( 'the_excerpt', 'add_read_more_link' );
 function add_read_more_link( $output ) {
-    global $post;
-    return $output . '<a href="' . get_permalink( $post->ID ) . '" class="read-more" title="continue reading">continue reading</a>';
+	global $post;
+	return $output . '<a href="' . get_permalink( $post->ID ) . '" class="read-more" title="continue reading">continue reading</a>';
 }
 
 // check "create user account" by default
@@ -432,12 +432,12 @@ add_filter( 'woocommerce_create_account_default_checked', function( $isChecked) 
 // declare Woocommerce support
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce' );
 }
 
 // add message to my account page
 add_action( 'woocommerce_account_content', 'course_access_message' );
 function course_access_message() {
-    echo '<h2>Heal Your Digestion Videos</h2>
-    <p><a href="' . site_url( '/heal-your-digestion-home/' ) . '">Access the course</a></p>';
+	echo '<h2>Heal Your Digestion Videos</h2>
+	<p><a href="' . site_url( '/heal-your-digestion-home/' ) . '">Access the course</a></p>';
 }
