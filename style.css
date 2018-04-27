@@ -4,14 +4,14 @@
  * Description: A mobile responsive and HTML5 theme built for the Genesis Framework.
  * Author: StudioPress
  * Author URI: http://www.studiopress.com/
-
- * Version: 1.1.2
-
+ *
+ * Version: 1.1.3
+ *
  * Tags: black, orange, white, one-column, two-columns, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
-
+ *
  * Template: genesis
  * Template Version: 2.1
-
+ *
  * License: GPL-2.0+
  * License URI: http://www.opensource.org/licenses/gpl-license.php
  */
@@ -658,20 +658,20 @@ input:hover[type="submit"],
 .button.green, .button.green-hover:hover      { background-color: #64c7c9; color: white; }
 .button-pink, .button.pink-hover:hover        { background-color: #fa806c; color: white; }
 
-/* ClickFunnels optin */
+/* ClickFunnels optin: “Resource List: Lead Magnet” */
 @media screen and (max-width: 499px) {
-	#clickoptin_cf_wrapper_w8fntrbr76es8tcj,
-	#clickoptin_cf_wrapper_w8fntrbr76es8tcj + p {
+	#clickoptin_cf_wrapper_8rw8vn6md67twt42,
+	#clickoptin_cf_wrapper_8rw8vn6md67twt42 + p {
 		margin-bottom: 0 !important;
 	}
 }
 
-#clickoptin_cf_wrapper_w8fntrbr76es8tcj br {
+#clickoptin_cf_wrapper_8rw8vn6md67twt42 br {
 	display: none;
 }
 
-#clickoptin_cf_button_w8fntrbr76es8tcj,
-#clickoptin_cf_button_w8fntrbr76es8tcj:hover {
+#clickoptin_cf_button_8rw8vn6md67twt42,
+#clickoptin_cf_button_8rw8vn6md67twt42:hover {
 	background-color: #fff200 !important;
 	color: #343c47 !important;
 	border: none !important;
